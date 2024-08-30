@@ -36,6 +36,11 @@ chat='true'>
     </div>
 
     <script>
+
+	     var firstNameInput = document.getElementById("first_name_2");
+
+        // Add the name attribute with the value "firstname"
+        firstNameInput.setAttribute("name", "firstname");
         function handleSubmit(event) {
             event.preventDefault();
             document.getElementById('nalla_form').style.display = 'none';
