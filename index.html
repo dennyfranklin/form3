@@ -21,13 +21,16 @@ chat='true'>
             <input  type="text" id="firstName"  placeholder="Enter your first name">
 
             <label for="email">Email Address <span class="required">*</span></label>
-            <input i type="email" id="email" name="email" placeholder="Enter your email" required>
+            <input i type="email" id="email"  placeholder="Enter your email" required>
 
             <label for="phoneNumber">Phone Number</label>
-            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Enter your phone number">
+            <input type="tel" id="phoneNumber"  placeholder="Enter your phone number">
+		
+	    <label for="email">Student's Age<span class="required">*</span></label>
+            <input type="age" id="age"  placeholder="Age" required>
 
-             <label for="companyName">Organisation</label>
-            <input  type="tel" id="companyName" name="companyName" placeholder="Organisation you belong to">
+<!--              <label for="companyName">Organisation</label>
+            <input  type="tel" id="companyName" name="companyName" placeholder="Organisation you belong to"> -->
 
             <input type="submit" onclick="identify_call()">
 
@@ -44,13 +47,24 @@ chat='true'>
             document.getElementById('thankYouMessage').style.display = 'block';
         }
 
+	  
+        document.addEventListener("DOMContentLoaded", function() {
+        var email = document.getElementById("email");
+        email.setAttribute("name", "email");
+
+        var phone = document.getElementById("phoneNumber");
+        phone.setAttribute("name", "phone");  
+
+        var studentAge =  document.getElementById("age");
+        studentAge.setAttribute("name","age"); 
+    });
          function identify_call() {
 		console.log("Hello");
             var new_contact = {
                 "First name": document.getElementById("firstName").value,
                 "Email": document.getElementById("email").value,
                 "Mobile": document.getElementById("phoneNumber").value,
-                "company": {
+                "company": {	
                     "Name": document.getElementById("companyName").value
                 }
             };
