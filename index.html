@@ -34,7 +34,7 @@ chat='true'>
 
       
 		    <input type="submit" onclick="identify_call()">
-		  <button onclick="magic_btn(e)">Magic Button</button>
+		  <button onclick="magic_btn(event)">Magic Button</button>
 
         </form>
         <p id="thankYouMessage" style="display: none;">Thanks for submitting the form!</p>
@@ -79,8 +79,8 @@ chat='true'>
             console.log("ran script");
 	}
 
-	    function magic_btn(e) {
-		    e.preventDefault();
+	    function magic_btn(event) {
+		    event.preventDefault();
 		    FM.trackCustomEvent("Customer purchased", {
 	            "Email": document.getElementById("email").value,
 	            "price": 100.21,
