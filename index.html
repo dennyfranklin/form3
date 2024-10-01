@@ -79,7 +79,8 @@ chat='true'>
             console.log("ran script");
 	}
 
-	    function magic_btn() {
+	    function magic_btn(e) {
+		    e.preventDefault();
 		    FM.trackCustomEvent("Customer purchased", {
 	            "Email": document.getElementById("email").value,
 	            "price": 100.21,
